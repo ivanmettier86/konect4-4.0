@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <ImageView
+                android:id="@+id/group_image"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:scaleType="centerCrop"
+                android:background="@android:color/darker_gray"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                android:onClick="changeProfile"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/group_users"
+                android:layout_height="250dp"
+                android:layout_width="match_parent"
+                android:layout_margin="10dp"
+                android:padding="5dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:weightSum="2"
+                >
+
+
+                <LinearLayout
+                    android:id="@+id/first_row"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_below="@+id/title"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:id="@+id/profile_1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_white"
+                        android:src="@drawable/messaging_profile" />
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimary"
+                        />
+
+
+                    <ImageView
+                        android:id="@+id/profile_2"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_white"
+                        android:src="@drawable/messaging_profile" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="4dp"
+                    android:background="@color/colorPrimary"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_below="@id/first_row"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:weightSum="2">
+
+                    <ImageView
+                        android:id="@+id/profile_3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_white"
+                        android:src="@drawable/messaging_profile" />
+
+                    <View
+                        android:layout_width="4dp"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimary"
+                        />
+
+
+                    <ImageView
+                        android:id="@+id/profile_4"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:layout_weight="1"
+                        android:background="@drawable/border_white"
+                        android:src="@drawable/messaging_profile" />
+
+                </LinearLayout>
+
+                </LinearLayout>
+
+            <TextView
+                android:id="@+id/click_upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="@color/white"
+                android:text="Click here to upload group image"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="120dp"
+                android:clickable="true"
+                android:onClick="changeProfile"
+                android:visibility="gone"
+                />
+
+
+            <EditText
+                android:id="@+id/group_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:gravity="center_vertical"
+                android:textColor="@color/white"
+                android:layout_marginTop="15dp"
+                android:textColorHint="@color/white"
+                android:hint="Enter group name"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_below="@+id/group_users"
+                android:background="@drawable/bottom_line"
+                />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_marginTop="5dp"
+                android:textColorHint="@color/white"
+                android:hint="Selected Location goes here"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_below="@+id/group_name"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/selected_friends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:text="Selected Friends at this location"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/address"
+                />
+
+            <com.konect4.utilities.MyRecyclerView
+                android:id="@+id/list_friends"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/selected_friends"
+                android:layout_marginTop="5dp" />
+
+            <TextView
+                android:id="@+id/user_location_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:text="Selected Users at this location"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/list_friends"
+                android:visibility="gone"
+                />
+
+
+            <com.konect4.utilities.MyRecyclerView
+                android:id="@+id/list_users"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_location_title"
+                android:visibility="gone"
+                android:layout_marginTop="5dp" />
+
+
+            <Button
+                android:id="@+id/create_group"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button"
+                android:clickable="true"
+                android:text="Create Group"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_below="@+id/list_users"
+                android:layout_centerHorizontal="true"
+                android:textAllCaps="false"
+                android:layout_marginBottom="20dp"
+                android:textStyle="normal"/>
+
+
+            <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_below="@+id/create_group"
+                >
+
+
+                <Button
+                    android:id="@+id/active_friends"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_button"
+                    android:clickable="true"
+                    android:text="Active Friends"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:textStyle="normal"/>
+
+                <Button
+                    android:id="@+id/start_swiping"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/rounded_button"
+                    android:clickable="true"
+                    android:layout_marginLeft="10dp"
+                    android:text="Start Swiping"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textAllCaps="false"
+                    android:textStyle="normal"
+                    android:layout_marginBottom="30dp"
+                    />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

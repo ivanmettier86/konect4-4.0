@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/back"
+                android:padding="7dp"
+                />
+
+
+
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main_logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                />
+
+            <TextView
+                android:id="@+id/address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="15dp"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColorHint="@color/white"
+                android:hint="Enter address"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_below="@+id/logo"
+                android:background="@drawable/bottom_line"
+                android:paddingBottom="5dp"
+                />
+
+
+
+            <!--<EditText-->
+                <!--android:id="@+id/group_name"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="16sp"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:layout_marginTop="15dp"-->
+                <!--android:inputType="text"-->
+                <!--android:maxLines="1"-->
+                <!--android:textColorHint="@color/white"-->
+                <!--android:hint="Enter new group name"-->
+                <!--android:background="@drawable/bottom_line"-->
+                <!--android:paddingBottom="5dp"-->
+                <!--android:layout_below="@+id/address"-->
+                <!--android:layout_alignLeft="@+id/address"-->
+                <!--android:layout_alignStart="@+id/address" />-->
+
+
+            <Button
+                android:id="@+id/checkin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button"
+                android:clickable="true"
+                android:text="Check in"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_below="@+id/address"
+                android:layout_centerHorizontal="true"
+                android:textAllCaps="false"
+                android:layout_marginBottom="30dp"
+                android:textStyle="normal"/>
+
+
+            <TextView
+                android:id="@+id/location_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="@color/white"
+                android:text="Friends at this location"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/checkin"
+                />
+
+
+            <com.konect4.utilities.MyRecyclerView
+                android:id="@+id/list_friends"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/location_title"
+                android:layout_marginTop="5dp" />
+
+
+
+            <TextView
+                android:id="@+id/user_location_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="@color/white"
+                android:text="Users at this location"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/list_friends"
+                android:visibility="gone"
+                />
+
+
+            <com.konect4.utilities.MyRecyclerView
+                android:id="@+id/list_users"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/user_location_title"
+                android:visibility="gone"
+                android:layout_marginTop="5dp" />
+
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button"
+                android:clickable="true"
+                android:text="Create Group"
+                android:padding="10dp"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:layout_below="@+id/list_users"
+                android:layout_centerHorizontal="true"
+                android:textAllCaps="false"
+                android:textStyle="normal"/>
+
+
+            <TextView
+                android:id="@+id/your_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="@color/white"
+                android:text="Your Group"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/next"
+                />
+
+
+            <com.konect4.utilities.MyRecyclerView
+                android:id="@+id/list_groups"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/your_group"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:src="@drawable/back"
+                android:padding="7dp"
+                />
+
+            <TextView
+                android:id="@+id/friends_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:text="Add New Friends"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                />
+
+
+            <EditText
+                android:id="@+id/search"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="15dp"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColorHint="@color/white"
+                android:hint="Search New Friend"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_below="@+id/friends_list"
+                android:background="@drawable/bottom_line"
+                android:paddingBottom="5dp"
+                />
+
+
+            <com.konect4.utilities.MyRecyclerView
+                android:id="@+id/list_friends"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/search"
+                android:layout_marginTop="5dp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

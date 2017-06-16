@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#708AE1</color>
+    <color name="top_bar_color">#D6E1F9</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#303F9F</color>
+
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <color name="new_msg_bg">#5A70BD</color>
+    <color name="search_bg">#859EF0</color>
+</resources>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+
+    <RelativeLayout
+        android:id="@+id/uper_layout"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        >
+
+
+        <com.daprlabs.cardstack.SwipeFrameLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:swipedeck="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.daprlabs.cardstack.SwipeDeck
+                android:id="@+id/swipe_deck"
+                android:layout_width="match_parent"
+                android:layout_height="320dp"
+                android:padding="10dp"
+                swipedeck:card_spacing="10dp"
+                swipedeck:max_visible="4"
+                swipedeck:render_above="true"
+                swipedeck:rotation_degrees="15" />
+
+
+        </com.daprlabs.cardstack.SwipeFrameLayout>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/default_resturant"
+            android:visibility="gone"
+            />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/group_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Group Name Goes Here"
+        android:textColor="@color/white"
+        android:layout_below="@id/uper_layout"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/group_title"
+        android:orientation="horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="15dp"
+        >
+
+        <ImageView
+            android:id="@+id/dislike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hower_dislike"
+            android:padding="10dp"/>
+
+        <ImageView
+            android:id="@+id/undo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hower_undo"
+            android:layout_marginLeft="15dp"
+            android:padding="10dp"/>
+
+        <ImageView
+            android:id="@+id/like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/hower_like"
+            android:layout_marginLeft="15dp"
+            android:padding="10dp"/>
+
+        </LinearLayout>
+
+
+    <Button
+        android:id="@+id/accepted"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:clickable="true"
+        android:text="Accepted"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_below="@+id/group_title"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        android:textStyle="normal"/>
+
+    <Button
+        android:id="@+id/match"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:clickable="true"
+        android:text="Match"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_below="@+id/accepted"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        android:textStyle="normal"/>
+
+    <Button
+        android:id="@+id/not_match"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:clickable="true"
+        android:text="Not Matched"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_below="@+id/match"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        android:textStyle="normal"/>
+
+    <Button
+        android:id="@+id/return_btn"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_button"
+        android:clickable="true"
+        android:text="Return"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_below="@+id/not_match"
+        android:layout_centerHorizontal="true"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        android:textStyle="normal"/>
+
+
+</RelativeLayout>

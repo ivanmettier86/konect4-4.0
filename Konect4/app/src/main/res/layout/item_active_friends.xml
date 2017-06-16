@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/profile_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:civ_border_width="0dp"
+        android:src="@drawable/profile_default"
+        app:civ_border_color="#FF000000"/>
+
+
+    <TextView
+        android:id="@+id/username"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="16sp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@+id/is_selected"
+        android:layout_toRightOf="@+id/profile_image"
+        android:text="User name"
+        android:textColor="@color/white"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:textSize="14sp"
+        android:layout_toLeftOf="@+id/is_selected"
+        android:layout_toRightOf="@+id/profile_image"
+        android:text="3 M"
+        android:layout_below="@+id/username"
+        android:textColor="@color/white"
+        android:layout_marginLeft="10dp"
+        />
+
+
+    <ImageView
+        android:id="@+id/is_selected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:padding="7dp"
+        android:src="@drawable/friend_selector"
+        android:layout_centerVertical="true" />
+
+
+    <ImageView
+        android:id="@+id/btn_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:padding="7dp"
+        android:visibility="gone"
+        android:src="@drawable/message_icon"
+        android:layout_centerVertical="true" />
+
+</RelativeLayout>

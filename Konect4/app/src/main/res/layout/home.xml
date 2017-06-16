@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/main_logo"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                />
+
+
+            <RelativeLayout
+                android:id="@+id/profile_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@+id/logo"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="15dp">
+
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/white"
+                    android:text="User Name"
+                    />
+
+
+                <TextView
+                    android:id="@+id/percentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textColor="@color/white"
+                    android:text="70 %"
+                    android:layout_below="@+id/username"
+                    android:layout_centerHorizontal="true"
+                    />
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/profile_image"
+                    android:layout_width="96dp"
+                    android:layout_height="96dp"
+                    app:civ_border_width="0dp"
+                    android:src="@drawable/profile_default"
+                    android:layout_below="@+id/percentage"
+                    android:layout_marginTop="5dp"
+                    android:layout_centerHorizontal="true"
+                    app:civ_border_color="#FF000000"/>
+
+
+                <TextView
+                    android:id="@+id/value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="17sp"
+                    android:textColor="@color/white"
+                    android:text="55"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/profile_image"
+                    />
+
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/friends_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="@color/white"
+                android:text="@string/friends_list"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/profile_layout"
+                />
+
+
+            <TextView
+                android:id="@+id/checkin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="@color/white"
+                android:text="@string/checkin"
+                android:layout_marginLeft="25dp"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/friends_list"
+                />
+
+            <TextView
+                android:id="@+id/active_friends"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="17sp"
+                android:textColor="@color/white"
+                android:text="Active Friends"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/checkin"
+                />
+
+
+            <com.konect4.utilities.MyRecyclerView
+                android:id="@+id/list_friends"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/active_friends"
+                android:layout_marginTop="5dp" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:id="@+id/logout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:text="@string/logout"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="7dp"
+        android:padding="5dp"
+        android:clickable="true"
+        android:onClick="makeLogout"
+        />
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/back"
+        android:padding="7dp"
+        />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:text="Profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        />
+
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/main_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/title"
+        />
+
+    <RelativeLayout
+        android:id="@+id/profile_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_marginRight="25dp"
+        android:layout_marginTop="25dp">
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:text="User Name"
+            />
+
+        <TextView
+            android:id="@+id/percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textColor="@color/white"
+            android:text="10"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/username"
+            android:layout_centerHorizontal="true"
+            />
+
+        <ImageView
+            android:id="@+id/edit_rpofile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/edit_icon"
+            android:padding="7dp"
+            android:layout_below="@+id/percentage"
+            android:clickable="true"
+            android:onClick="changeProfile"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            app:civ_border_width="0dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/profile_default"
+            android:layout_below="@+id/percentage"
+            android:layout_centerHorizontal="true"
+            app:civ_border_color="#FF000000"
+            android:clickable="true"
+            android:onClick="changeProfile"
+            />
+
+        <ImageView
+            android:id="@+id/upload_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/camera"
+            android:padding="7dp"
+            android:layout_below="@+id/profile_image"
+            android:clickable="true"
+            android:onClick="changeProfile"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>
